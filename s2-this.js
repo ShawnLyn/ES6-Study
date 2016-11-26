@@ -15,14 +15,85 @@ var a = 2;
 foo()*/
 
 // 2。隐含绑定（Implicit Binding）
+
 // 调用点是否有一个环境对象
-function foo() {
+
+/*function foo() {
   console.log(this.a)
 }
 
-const obj = {
-	a: 2,
+const obj2 = {
+	a: 42,
 	foo: foo
 };
 
-obj.foo();
+const obj1 = {
+	a: 2,
+	obj2: obj2
+};
+
+obj1.obj2.foo();*/ //42
+
+// 3。明确绑定
+
+/*
+function foo() {
+	console.log(this.a)
+}
+
+const obj = {
+	a: 2
+}
+
+foo.call(obj)*/
+
+// 4。硬绑定
+
+/*
+function foo() {
+	console.log(this.a)
+}
+
+const obj = {
+	a: 2
+}
+
+const bar = function () {
+	foo.call(obj)
+}
+
+bar();
+
+setTimeout(bar, 100)*/
+/*
+function foo(s) {
+	console.log(this.a, s)
+	return this.a + s
+}
+
+var obj = {
+	a: 2
+}
+
+var bar = function () {
+	return foo.apply(obj, arguments)
+}
+
+var b = bar(2)*/
+
+function foo(s) {
+	console.log( this.a, s)
+	return this.a + s
+}
+
+function bind(fn, obj) {
+  return function () {
+    return fn.apply(obj, arguments)
+  }
+}
+
+var obj = {
+	a: 22
+}
+
+bind(foo, obj)(123)
