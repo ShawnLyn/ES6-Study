@@ -81,6 +81,7 @@ var bar = function () {
 
 var b = bar(2)*/
 
+/*
 function foo(s) {
 	console.log( this.a, s)
 	return this.a + s
@@ -96,4 +97,4 @@ var obj = {
 	a: 22
 }
 
-bind(foo, obj)(123)
+bind(foo, obj)(123)*/
