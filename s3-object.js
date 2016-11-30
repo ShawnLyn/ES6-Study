@@ -94,6 +94,7 @@ for (let v of myArray) {
  object[Object.keys(object)[0]]
  )*/
 
+/*
 let randoms = {
 	a: 'minooo',
 	[Symbol.iterator]: function () {
@@ -111,4 +112,4 @@ for (let n of randoms) {
 	if (randoms_pool.length === 5) break;
 }
 
-console.log(randoms_pool)
+console.log(randoms_pool)*/
