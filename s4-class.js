@@ -99,6 +99,7 @@ function Car() {
 Car().drive()*/
 
 
+/*
 const Something = {
 	cool: function () {
 		this.greeting = "hello world"
@@ -110,4 +111,4 @@ Something.cool()
 
 
 
-console.log(Something.greeting)
+console.log(Something.greeting)*/
