@@ -59,3 +59,28 @@ console.log(Object.prototype.toString.call([11]))*/
 
 log('ni', 'hao')*/
 
+/*
+let User = {
+	count: 1,
+
+	getCount: function () {
+		return this.count
+	}
+}
+
+console.log(User.getCount())
+
+const func = User.getCount
+
+const funcBind = User.getCount.bind(User)
+
+console.log(func(), funcBind())
+
+Function.prototype.bind = Function.prototype.bind ||
+	function (context) {
+		const self = this
+		return function () {
+			return self.apply(context, arguments)
+		}
+	}*/
+
