@@ -111,3 +111,142 @@ console.log(
 	a.sayHello(),
 	a.constructor === Foo
 )*/
+
+
+// 原型继承
+
+/*
+function Foo(name) {
+	this.name = name
+}
+
+Foo.prototype.myName = function () {
+	return this.name
+}
+
+function Bar(name, label) {
+	Foo.call(this, name)
+	this.label = label
+}
+
+// 创建一个新的 Bar.prototype 链接到 Foo.prototype
+Bar.prototype = Object.create(Foo.prototype)
+
+// 下面的两种方式，虽然也能工作，但是会有一些问题和不想要的副作用。
+// Bar.prototype = Foo.prototype
+// Bar.prototype = new Foo()
+
+Bar.prototype.myLabel = function () {
+	return this.label
+}
+
+let func = new Bar('aaa', 'bbb')
+
+console.log(
+	func.myName(),
+	func.myLabel()
+)*/
+
+
+/*
+// ES5方式
+Bar.prototype = Object.create(Foo.prototype)
+
+// ES6 方式
+Object.setPrototypeOf(Bar.prototype, Foo.prototype)*/
+
+/*
+function Foo(name) {
+	this.name = name
+}
+
+Foo.prototype.myName = function () {
+	console.log(this.name)
+}
+
+let func = new Foo('minooo')
+/!*function Other() {
+	console.log(123)
+}*!/
+
+let Other = Object.create(Foo.prototype)
+
+func.myName()
+
+console.log(
+	func instanceof Foo,
+	Other instanceof Foo
+)*/
+/*
+
+function Foo() {
+	console.log(123)
+}
+
+let a = new Foo()
+let c = new Foo()
+
+console.log(
+	Foo.prototype.isPrototypeOf(a),
+	a.isPrototypeOf(c)
+)*/
+
+/*
+let foo = {
+	sth: function () {
+		console.log('hello')
+  }
+}
+
+let bar = Object.create(foo)
+
+bar.sth()
+
+console.log(
+	'sth' in bar,
+	bar.hasOwnProperty('sth'),
+	foo.hasOwnProperty('sth')
+)*/
+/*
+
+let no = Object.create(null)
+console.log(
+	no === null,
+	no == null,
+	no.prototype === null
+)*/
+
+
+/*let foo = {
+	say: function () {
+		console.log('hello')
+  }
+}
+
+let bar = Object.create(foo)*/
+
+/*
+if(Object.create) {
+	Object.prototype.create = function (o) {
+		function Foo() {}
+		Foo.prototype = o
+		return new Foo()
+  }
+}
+
+let foo = {
+	say: function () {
+		console.log('minooo')
+  }
+}
+
+let bar = Object.create(foo)
+
+bar.say()
+
+function nihao() {
+	console.log(123)
+}
+
+console.log(typeof nihao)*/
+
