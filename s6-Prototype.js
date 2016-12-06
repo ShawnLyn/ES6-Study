@@ -250,3 +250,35 @@ function nihao() {
 
 console.log(typeof nihao)*/
 
+/*
+function A(name) {
+	this.name = name
+	this.sayHello = function () {
+		console.log(this.name)
+	}
+}
+
+let a1 = new A('a1')
+let a2 = new A('a2')
+
+a1.sayHello()
+a2.sayHello()
+
+function B(name) {
+	this.name = name
+}
+
+B.prototype.sayHello = function () {
+	console.log(this.name)
+}
+
+let b1 = new B('b1')
+b1.sayHello()*/
+
+/*
+let s = Symbol
+console.log(s, typeof s)*/
+
+let s1 = Symbol()
+let s2 = Symbol()
+console.log(s1 === s2)
