@@ -46,3 +46,12 @@ class C {
 let c = new C('hello')
 c.r()*/
 
+/*
+let arr = []
+for (let i = 0; i < 1000000; i++) {
+	let num = Math.round(Math.random() * 1000000)
+	if(num <= 100000){
+		arr.push(num)
+	}
+}
+console.log(arr.length)*/
