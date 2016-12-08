@@ -55,3 +55,22 @@ for (let i = 0; i < 1000000; i++) {
 	}
 }
 console.log(arr.length)*/
+
+/*var b = typeof a === "number" ? a : 42;*/
+
+/*
+var foo = "42";
+var myNumber = +foo;
+var negativeFoo = -foo;
+
+var args = { 0: "foo", 1: "bar", length: 2 };
+Array.prototype.slice.call(args)
+
+var t = 1;
+var f = 0;
+!!t
+// → true
+!!f
+
+var foo = 42;
+"" + foo */
