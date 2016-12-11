@@ -42,3 +42,16 @@
 //     console.log('undefined is safe here!')
 //   }
 // })()
+
+// var foo = true
+// if(foo){
+//   var bar = foo*2
+// }
+// console.log(bar)
+
+try {
+  undefined()
+}
+catch (err) {
+  console.log(err)
+}
