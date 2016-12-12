@@ -49,11 +49,36 @@
 // }
 // console.log(bar)
 
-try {
-  undefined()
-}
-catch (err) {
-  console.log(err)
-}
+// try {
+//   undefined()
+// }
+// catch (err) {
+//   console.log(err)
+// }
 
-// 31页码
+// 标识符
+// var foo = true
+// if (foo) {
+//   var hello = function () {
+//     console.log(123)
+// 	}
+// }
+// hello()
+
+// {
+//   var hello = 123;
+//   let nihao = 345
+// }
+// console.log(hello, nihao)
+// let 不会将变量提升
+
+// function hello(n) {
+//   console.log(n.hello)
+// }
+//
+// {
+//   let somedata = {hello:'hello,minooo'}
+//   hello(somedata)
+// }
+
+// 页码 35
