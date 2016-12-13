@@ -100,4 +100,108 @@
 // foo.doAnother();
 
 // console.log(Math.max.apply(Math, [1,2,3]))
-// 69
+
+// var foo = (function CoolModule() {
+//   var something = "cool";
+//   var another = [1, 2, 3];
+//
+//   function doSomething() {
+//     console.log(something)
+//   }
+//
+//   function doAnother() {
+//     console.log(another.join('!'))
+//   }
+//
+//   return {
+//     doSomething: doSomething,
+//     doAnother: doAnother
+//   }
+// })()
+//
+// foo.doSomething();
+// foo.doAnother()
+
+// var foo = (function CoolModule(id) {
+//   function change() {
+//     publicAPI.identify = identify2;
+//   }
+//
+//   function identify1() {
+//     console.log(id)
+//   }
+//
+//   function identify2() {
+//     console.log(id.toUpperCase())
+//   }
+//
+//   var publicAPI = {
+//     change: change,
+//     identify: identify1
+//   }
+//
+//   return publicAPI
+// })('foo module')
+//
+// foo.identify();
+// foo.change();
+// foo.identify();
+
+// var modules = {}
+// var deps = ["bar"]
+// deps[0] = modules[deps[0]]
+// modules["bar"] =
+//
+// console.log(deps, modules)
+
+// var modules = {}
+// var foo = function (bar) {
+//   function aaa() {
+//     console.log(bar.toUpperCase())
+//   }
+//   return {
+//     aaa:aaa
+//   }
+// }
+// var arr = [];
+// for(var i=0; i<3; i++) {
+//   arr[i] = modules[arr[i]]
+// }
+// modules['bar'] = foo.apply(foo, arr)
+//
+// console.log(modules, arr)
+
+// function foo() {     console.log( a ) }
+//
+//   function bar() {     var a = 3;     foo(); }
+//
+//   var a = 2;
+//
+//   bar();
+
+// {
+//   let a=2
+//   console.log(a)
+// }
+// console.log(a)
+
+// try{throw 2}catch(a){
+//   console.log(a)
+// }
+//
+// console.log(a)
+
+// var obj = {
+//   idd: 'awesome',
+//   cool: function coolFn() {
+//     var self = this;
+//     console.log(self.idd)
+//   }
+// }
+//
+// var idd = "not awesome";
+//
+// obj.cool();
+// setTimeout(() => obj.cool.apply(null), 100)
+
+// 页码 87
