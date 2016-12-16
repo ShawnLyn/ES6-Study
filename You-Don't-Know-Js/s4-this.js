@@ -105,4 +105,20 @@
 
 // 3.隐式丢失 回调函数会隐式this,比如著名的 setTimeout
 
-// 页码 103
+// 4.显示绑定 call apply
+
+// function foo() {
+//   console.log(this.a)
+// }
+//
+// var obj = {
+//   a: 2
+// }
+//
+// var bar = function () {
+//   foo.call(obj)
+// }
+//
+// setTimeout(bar, 100)
+
+// 104
