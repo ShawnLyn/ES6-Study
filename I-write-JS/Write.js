@@ -8,6 +8,8 @@
 // 	Array.prototype.slice.call(a)
 // )
 
+
+// 从一个数组中随机抽取不重复的若干元素
 function draw(m=2,n=1) {
 	let
 		arr = [],
