@@ -61,19 +61,21 @@
 //
 // console.log(new Array(4).fill(1).map(() => drawer.next().value));
 
-function* draw(m) {
-	const cards = new Array(m).fill(1).map((_, i) => i + 1);
 
-	for (let i=0; i<m; i++) {
-		const rand = Math.floor(Math.random() * m);
-		[cards[i], cards[rand]] = [cards[rand], cards[i]];
-		yield cards
-	}
-}
-
-let drawer = draw(4);
-
-console.log(draw(4).next().value);
+// 其他优雅
+// function* draw(m) {
+// 	const cards = new Array(m).fill(1).map((_, i) => i + 1);
+//
+// 	for (let i=0; i<m; i++) {
+// 		const rand = Math.floor(Math.random() * m);
+// 		[cards[i], cards[rand]] = [cards[rand], cards[i]];
+// 		yield cards
+// 	}
+// }
+//
+// let drawer = draw(4);
+//
+// console.log(draw(4).next().value);
 
 // sort 洗牌有自身的问题，不准备，比如下面，预期结果应该是2500次左右，可实际运行，每次都是3200次左右。
 // let counter = 0;
