@@ -8,7 +8,7 @@
 // 	Array.prototype.slice.call(a)
 // )
 
-
+// http://caibaojian.com/get-random-element.html
 // 从一个数组中随机抽取不重复的若干元素
 // 1.直接抽取
 // function draw(m=2,n=1) {
@@ -83,3 +83,36 @@
 // 	if([1,2,3,4].sort(f => Math.random() > 0.5)[0] === 1) {counter++}
 // }
 // console.log(counter)
+
+// 闭包练习
+// function s1() {
+// 	let num = 11;
+// 	const say = function () {
+// 		console.log(num)
+// 	};
+// 	num++;
+// 	return say
+// }
+//
+// const s2 = s1();
+// s2();
+
+// function buildList(list) {
+// 	let arr = [];
+// 	for (let i=0; i<list.length; i++) {
+// 		const item = 'item' + i;
+// 		arr.push(function () {
+// 			console.log(item, ':', list[i])
+// 		})
+// 	}
+// 	return arr;
+// }
+//
+// function testList() {
+// 	const arr = buildList([1,2,3]);
+// 	for(let i=0; i<arr.length; i++){
+// 		arr[i]()
+// 	}
+// }
+//
+// testList()
