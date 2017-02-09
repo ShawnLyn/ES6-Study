@@ -6,7 +6,7 @@
 // console.log(
 // 	Array.prototype.slice.apply(a),
 // 	Array.prototype.slice.call(a)
-// )
+
 
 // http://caibaojian.com/get-random-element.html
 // 从一个数组中随机抽取不重复的若干元素
