@@ -116,3 +116,33 @@
 // }
 //
 // testList()
+
+
+// 获取对象长度的方法。
+//function getObjectLength(o) {
+//	let i=0, p;
+//	for(p in o) {
+//		if(o.hasOwnProperty(p)){
+//			i++
+//		}
+//	}
+//	return i
+//}
+//
+//var a = {a:1, b:2};
+//
+//function MyObj(a,b) {
+//	this.a = a;
+//	this.b = b;
+//}
+//MyObj.prototype.say = function () {
+//	console.log(this.a)
+//}
+//
+//var a1 = new MyObj(2,3);
+//
+//var n = 0;
+//for(let key in a1){
+//	n++
+//}
+//console.log(getObjectLength(a1))
