@@ -146,3 +146,25 @@
 //	n++
 //}
 //console.log(getObjectLength(a1))
+
+// 关于返回函数参数数组方法的性能比较，经测试（f2性能最佳，为f1的三倍）
+
+//function f1(){return [].slice.call(arguments)}
+//function f2(){
+//	for(var len=arguments.length, arr=Array(len), i=0; i<len; i++){
+//		arr[i]=arguments[i]
+//	}
+//	return arr
+//}
+//
+//console.time('f2')
+//for(let i=0; i<100000; i++) {
+//	f2(1,2,3,4)
+//}
+//console.timeEnd('f2')
+
+//console.time('f2')
+//for(let i=0; i<1000; i++) {
+//	f2(1,2,3,4)
+//}
+//console.timeEnd('f2')
