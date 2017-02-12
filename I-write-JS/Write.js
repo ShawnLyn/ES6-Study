@@ -168,3 +168,13 @@
 //	f2(1,2,3,4)
 //}
 //console.timeEnd('f2')
+
+function foo() {
+  return () => {console.log(this.a)}
+}
+
+var obj1 = { a:1 };
+var obj2 = { a:2 };
+
+var bar = foo().call(obj1);
+
